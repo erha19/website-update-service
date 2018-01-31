@@ -1,0 +1,796 @@
+/* reset */
+html,
+body,
+div,
+span,
+a,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0, 0, 0, 0.65);
+  font-family: Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.headContent {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.TabBtn {
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  display: inline-block;
+  background: #0090ff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 2px;
+}
+.headLeft {
+  height: 435px;
+  width: 16vw;
+  background: linear-gradient(#00d3ff, #00c6ff);
+}
+
+.headRight {
+  height: 435px;
+  width: 16vw;
+  background: linear-gradient(#0087ff, #0087ff);
+}
+#pcDom {
+  width: 100%;
+}
+.headImg {
+  height: 435px;
+  width: 68vw;
+  background: linear-gradient(to left, #0087ff, #0087ff 20%, #01a3ff 60%, #00c1ff);
+}
+
+.bgOne {
+  background: rgb(255, 255, 255) url(./img/bg1.png) no-repeat 75px center;
+  width: 100%;
+  height: 430px;
+}
+
+.bgTwo {
+  background: rgb(255, 255, 255) url(./img/bg2.png) no-repeat center center;
+  width: 60%;
+  height: 260px;
+  background-size: 100% 100%;
+  margin: 50px auto 0 auto;
+  display: flex;
+}
+
+.bgThree {
+  background: rgb(255, 255, 255) url(./img/bg3.png);
+  width: 100%;
+  height: 260px;
+  background-size: 100%;
+}
+
+.bgTwo .title,
+.bgThree .title {
+  color: #ffffff;
+}
+
+.intro,
+.style,
+.partner {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro .title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.style .title,
+.partner .title {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.registerButton {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+  margin-top: 20px;
+  width: 120px;
+  color: white;
+  background: #01a3ff;
+  border: 1px solid #00d8ff;
+}
+
+.intro .body,
+.style .body {
+  font-size: 12px;
+  align-self: center;
+  justify-content: center;
+  width: 831px;
+  margin-top: 26px;
+  line-height: 20px;
+}
+
+.bgThree .body {
+  display: flex;
+  flex-direction: row;
+}
+
+.intro .title:after,
+.meeting .title:after,
+.style .title:after,
+.partner .title:after,
+.bgThree .title:after {
+  display: block;
+  margin: 10px auto 0;
+  content: '';
+  width: 23px;
+  height: 2px;
+  background: #0088ff;
+  margin-top: 15px;
+}
+
+.extraC:after {
+  background: #fff !important;
+}
+
+.meeting .title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bgGray {
+  background-color: #f3f5f8;
+  height: 60px;
+}
+
+.meeting .item {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 18vw;
+  flex-direction: row;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.meeting .style .guestsBase {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  padding-left: 18vw;
+  padding-right: 18vw;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.meeting .item .timeBase {
+  align-self: baseline;
+  width: 100px;
+  flex-shrink: 0;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.meeting .item .time {
+  align-self: center;
+  width: 100px;
+  font-size: 13px;
+}
+
+.meeting .item .content {
+  padding-left: 6.5vw;
+  align-self: center;
+  font-size: 13px;
+}
+
+.meeting .item .contentBase {
+  padding-left: 6.5vw;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.meeting .item .contentBase-vert {
+  padding-left: 6.5vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.meeting .item .contentBase-vert .sessionInfo {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20vw;
+}
+
+.meeting .item .contentBase-vert .multiSpeakers {
+  display: flex;
+  flex-direction: column;
+}
+
+.meeting .item .contentBase-vert .multiSpeakers .speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.meeting .item .contentBase-vert .multiSpeakers .speaker .speakerName,
+.meeting .item .contentBase-vert .multiSpeakers .speaker .speakerTitle {
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.meeting .item .hImg1,
+.hImg2,
+.hImg3,
+.hImg4,
+.hImg5,
+.hImg6,
+.hImg7,
+.hImg8,
+.gImg1,
+.gImg2,
+.gImg3,
+.gImg4,
+.gImg5,
+.gImg6 {
+  align-items: baseline;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hImg1 {
+  background: rgb(255, 255, 255) url(./img/himg1.png);
+  background-size: 100%;
+}
+
+.hImg2 {
+  background: rgb(255, 255, 255) url(./img/himg2.png);
+  background-size: 100%;
+}
+
+.hImg3 {
+  background: rgb(255, 255, 255) url(./img/himg3.png);
+  background-size: 100%;
+}
+
+.hImg4 {
+  background: rgb(255, 255, 255) url(./img/himg4.png);
+  background-size: 100%;
+}
+
+.hImg5 {
+  background: rgb(255, 255, 255) url(./img/himg5.png);
+  background-size: 100%;
+}
+
+.hImg6 {
+  background: rgb(255, 255, 255) url(./img/himg6.png);
+  background-size: 100%;
+}
+
+.hImg7 {
+  background: rgb(255, 255, 255) url(./img/himg7.png);
+  background-size: 100%;
+}
+
+.hImg8 {
+  background: rgb(255, 255, 255) url(./img/himg8.png);
+  background-size: 100%;
+}
+
+.gImg1 {
+  background: rgb(255, 255, 255) url(./img/gimg1.png);
+  background-size: 100%;
+}
+
+.gImg2 {
+  background: rgb(255, 255, 255) url(./img/gimg2.png);
+  background-size: 100%;
+}
+
+.gImg3 {
+  background: rgb(255, 255, 255) url(./img/gimg3.png);
+  background-size: 100%;
+}
+
+.gImg4 {
+  background: rgb(255, 255, 255) url(./img/gimg4.png);
+  background-size: 100%;
+}
+
+.gImg5 {
+  background: rgb(255, 255, 255) url(./img/gimg5.png);
+  background-size: 100%;
+}
+
+.gImg6 {
+  background: rgb(255, 255, 255) url(./img/gimg6.png);
+  background-size: 100%;
+}
+
+.meeting .item .panel {
+  flex-direction: column;
+  padding-left: 5%;
+  margin-right: 20vw;
+}
+
+.meeting .guestsBase .guest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 25px;
+}
+
+.meeting .item .pTit,
+.meeting .guest .gTitle {
+  font-size: 14px;
+  color: #8e8e8e;
+  line-height: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.meeting .item .pName,
+.meeting .guest .gName {
+  font-size: 18px;
+  color: #000;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bolder;
+}
+
+.meeting .item .pIntro {
+  font-size: 12px;
+  color: #333c;
+}
+
+.meeting .guestsBase .gIntro {
+  font-size: 12px;
+  color: #333c;
+  width: 19vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.partnerContent {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  margin: 5px 20vw 20px 20vw;
+}
+
+.partnerImg1 {
+  background: rgb(255, 255, 255) url(./img/partner1.png) no-repeat center center;
+  flex: 0 0 10%;
+  height: 30px;
+  background-size: 100% 100%;
+}
+
+.partnerImg2 {
+  background: rgb(255, 255, 255) url(./img/partner2.png) no-repeat center center;
+  flex: 0 0 20%;
+  height: 30px;
+  background-size: 100% 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.partnerImg3 {
+  background: rgb(255, 255, 255) url(./img/partner3.png) no-repeat center center;
+  flex: 0 0 20%;
+  height: 30px;
+  background-size: 100% 100%;
+}
+
+.partnerImg4 {
+  background: rgb(255, 255, 255) url(./img/partner4.png) no-repeat center center;
+  flex: 0 0 10%;
+  height: 30px;
+  background-size: 100% 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.partnerImg5 {
+  background-image: url(./img/juejin_logo_.png) !important;
+  flex: 0 0 10%;
+  height: 30px;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+.partnerImg6 {
+  background-image: url(./img/sf-logo-rgb-slogan.png) !important;
+  flex: 0 0 10%;
+  height: 30px;
+  background-size: 100% 100%;
+}
+.cm {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+}
+
+.cmImg1 {
+  background: url(./img/cm1.png) no-repeat center center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.cmImg2 {
+  background: url(./img/cm2.png) no-repeat center center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.cmTxt {
+  color: #fff;
+  align-self: center;
+}
+
+.cmLink {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footerImg {
+  background: url(./img/footImg.png) no-repeat center center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.footerTxt {
+  align-self: center;
+}
+
+.footerTxt div {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #b7bbbd;
+  font-size: 12px;
+}
+
+.meeting .item .extraP {
+  padding-left: 13vw;
+}
+
+.meeting .item:nth-child(5) {
+  border-bottom: none;
+}
+.addImg {
+  background: url('./img/addressImg.png');
+  width: 12px;
+  height: 12px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+.phoneImg {
+  background: url('./img/phoneImg.png');
+  width: 12px;
+  height: 12px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+.mapCont {
+  align-self: flex-end;
+  margin-top: 65px;
+  margin-right: 5vw;
+}
+.addCont {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.addTxt,
+.phoneTxt {
+  color: #fff;
+  align-self: center;
+  font-size: 13px;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+.hotelTxt {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.addCont,
+.phoneCont {
+  flex-direction: row;
+  display: flex;
+}
+
+.wapContent .TabBtn {
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  display: inline-block;
+  background: #0090ff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 2px;
+}
+@media screen and (max-width: 768px) {
+  #pcDom {
+    display: none;
+  }
+  #wapDom {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  #pcDom {
+    display: block;
+  }
+  #wapDom {
+    display: none;
+  }
+}
+.wapContent .header {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.wapContent .header img {
+  width: 100%;
+  display: block;
+}
+.wapContent .map {
+  background: url('./img/wapAdd.png');
+  height: 35vh;
+  margin-top: 10px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.wapContent .summary .title,
+.wapContent .meeting .title,
+.wapContent .aboutUs .title,
+.wapContent .partner .title,
+.wapContent .address .title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: bolder;
+}
+.wapContent .summary .title:after,
+.wapContent .meeting .title:after,
+.wapContent .aboutUs .title:after,
+.wapContent .partner .title:after,
+.wapContent .address .title:after {
+  display: block;
+  margin: 1rem auto 0;
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background: #0088ff;
+  margin-top: 1rem;
+}
+.wapContent .meeting .item {
+  /* height: 2rem; */
+  padding-left: 10vw;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.wapContent .meeting .item .time {
+  width: 25vw;
+  flex-shrink: 0;
+  flex-grow: 0;
+  text-indent: -2ch;
+  font-family: Consolas, Monaco, monospace;
+  align-self: baseline;
+}
+.wapContent .bgGray {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+
+  height: 2rem;
+}
+.wapContent .bgGray .time {
+  align-self: center !important;
+}
+.wapContent .meeting .item:nth-child(5) {
+  padding-bottom: 0;
+}
+
+.wapContent .summary .body {
+  font-size: 1.2em;
+  margin: 1rem 10vw;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.wapContent .aboutUs .body,
+.wapContent .address .body {
+  font-size: 1.2em;
+  margin: 1rem 10vw;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.wapContent .aboutUs .registerButton {
+  font-size: 1.2em;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 80px;
+}
+.wapContent .partnerCont {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.wapContent .partner {
+  border-bottom: 1px solid #f5f5f5;
+}
+.wapContent .wapPartnerImg1 {
+  background: url('./img/partner3.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 45%;
+  height: 25px;
+  align-self: center;
+  margin-top: 5px;
+}
+.wapContent .wapPartnerImg2 {
+  background: url('./img/partner2.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 45%;
+  height: 25px;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.wapContent .wapPartnerImg3 {
+  background: url('./img/partner1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 16%;
+  height: 25px;
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.wapContent .wapPartnerImg4 {
+  background: url('./img/partner4.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 23%;
+  height: 25px;
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.wapContent .wapPartnerImg5 {
+  background: url('./img/juejin_logo_.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 16%;
+  height: 25px;
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.wapContent .wapPartnerImg6 {
+  background: url('./img/sf-logo-rgb-slogan.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 23%;
+  height: 25px;
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.wapContent .extraC {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bolder;
+  flex: 0 0 40%;
+}
+.wapContent .bgThree {
+  background: url('./img/bg3.png');
+  height: 10.5rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.wapContent .bgThree .body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  align-items: flex-start;
+}
+.wapContent .intro .body {
+  width: auto;
+  flex: 1;
+}
+.wapContent .cmImg1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 100% 100%;
+  align-self: center;
+  margin-right: 0.5rem;
+}
+.wapContent .bgThree .body .cm {
+  padding-bottom: 0.5rem;
+}
+.wapContent .cmImg2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 100% 100%;
+  align-self: center;
+  margin-right: 0.5rem;
+}
+.wapContent .meeting .item .content {
+  font-size: 1.2rem;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.wapContent .addCont,
+.wapContent .phoneCont {
+  display: flex;
+}
+.wapContent .fd {
+  flex: 0 0 15%;
+}
+.wapContent .fdetail {
+  flex: 0 0 85%;
+}
+.wapContent .wapPextra {
+  display: flex;
+  justify-content: center;
+}

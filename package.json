@@ -1,0 +1,15 @@
+{
+  "name": "serverhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "erha19 <faterrole@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cmd-executor": "^1.1.1",
+    "node-git-cache": "^1.0.9"
+  }
+}

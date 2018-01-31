@@ -1,0 +1,13 @@
+{
+  "rootPath": "../html",
+  "gits": [{
+    "directory": "weex",
+    "repo": "https://github.com/apache/incubator-weex-site.git",
+    "branch": "master",
+    "root": true
+  }, {
+    "directory": "weexConf2018",
+    "repo": "./weexConf2018",
+    "branch": "master"
+  }]
+}

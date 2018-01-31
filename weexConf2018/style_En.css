@@ -1,0 +1,18 @@
+html,
+body {
+  word-break: break-word;
+}
+.wapContent .meeting .item .content {
+  padding-right: 4vw !important;
+}
+.wapContent .aboutUs .registerButton {
+  width: 105px !important;
+}
+.mapCont {
+  width: 350px;
+}
+.addImg {
+  width: 22px !important;
+  align-self: baseline !important;
+  margin-top: 5px;
+}
