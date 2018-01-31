@@ -3,7 +3,7 @@
   "gits": [{
     "directory": "weex",
     "repo": "https://github.com/apache/incubator-weex-site.git",
-    "branch": "master",
+    "branch": "asf-site",
     "root": true
   }, {
     "directory": "weexConf2018",
