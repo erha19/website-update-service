@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 const path = require('path');
 
 const scheduleCronstyle = () => {
-  schedule.scheduleJob('*/20 * * * *', function(){
+  schedule.scheduleJob('8 * * * *', function(){
     console.log('scheduleCronstyle:' + new Date());
     runTask();
   }); 
@@ -31,7 +31,9 @@ const runTask = async () => {
   await rm(`-rf ${configs.rootPath}/${root[0].directory}tmpelate`)
   console.log(`=> git clone ${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
   await git.clone(`${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
+  console.log(`rm -rf ${configs.rootPath}/${root[0].directory}tmpelate/.git`)
   await rm(`-rf ${configs.rootPath}/${root[0].directory}tmpelate/.git`)
+  console.log(`cd ${configs.rootPath}/${root[0].directory}tmpelate`)
   process.chdir(`${configs.rootPath}/${root[0].directory}tmpelate`)
   console.log(`=> npm install on ${configs.rootPath}/${root[0].directory}tmpelate`)
   await npm('install')
