@@ -1,5 +1,5 @@
 {
-  "rootPath": "../html",
+  "rootPath": "../../html",
   "gits": [{
     "directory": "weex",
     "repo": "https://github.com/apache/incubator-weex-site.git",
