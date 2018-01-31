@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cmd-executor": "^1.1.1",
-    "node-git-cache": "^1.0.9"
+    "node-git-cache": "^1.0.9",
+    "node-schedule": "^1.3.0"
   }
 }
