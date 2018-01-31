@@ -30,7 +30,7 @@ const runTask = async () => {
   console.log(`=> rm -rf ${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
   await rm(`-rf ${configs.rootPath}/${root[0].directory}tmpelate`)
   console.log(`=> git clone ${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
-  await git.clone (`${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
+  await git.clone(`${root[0].repo} -b ${root[0].branch} ${configs.rootPath}/${root[0].directory}tmpelate`)
   await rm(`-rf ${configs.rootPath}/${root[0].directory}tmpelate/.git`)
   process.chdir(`${configs.rootPath}/${root[0].directory}tmpelate`)
   console.log(`=> npm install on ${configs.rootPath}/${root[0].directory}tmpelate`)
