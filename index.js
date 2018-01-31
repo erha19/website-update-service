@@ -55,9 +55,9 @@ const runTask = async () => {
   }
   console.log(`=> rm -rf ${path.join(ROOT, configs.rootPath, root[0].directory)}`)
   await rm(`-rf ${path.join(ROOT, configs.rootPath, root[0].directory)}`)
-  await mkdir(`${path.join(ROOT, configs.rootPath, root[0].directory)}`)
-  console.log(`=> cp -R ${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`)}/* ${path.join(ROOT, configs.rootPath, root[0].directory)}/`)
-  await cp(`-R ${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`)}/* ${path.join(ROOT, configs.rootPath, root[0].directory)}/`)
+  // await mkdir(`${path.join(ROOT, configs.rootPath, root[0].directory)}`)
+  console.log(`=> mv ${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`)}/* ${path.join(ROOT, configs.rootPath, root[0].directory)}/`)
+  await mv(`${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`)} ${path.join(ROOT, configs.rootPath, root[0].directory)}`)
   console.log('Successful Update!')
 }
 
