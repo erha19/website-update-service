@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 const path = require('path');
 
 const scheduleCronstyle = () => {
-  schedule.scheduleJob('8 * * * *', function(){
+  schedule.scheduleJob('*/30 * * * *', function(){
     console.log('scheduleCronstyle:' + new Date());
     runTask();
   }); 
@@ -70,5 +70,5 @@ const simpleExec = async (cmd) => {
   })
 }
 
-// scheduleCronstyle();
-runTask();
+scheduleCronstyle();
+// runTask();
