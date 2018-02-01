@@ -15,7 +15,7 @@ const scheduleCronstyle = () => {
 }
 
 const spliceRootConfig = (configs) => {
-  let config = Object.assign({}, configs)
+  let config = [].concat(configs)
   let root;
   for(let i in config){
     if(config[i].root) {
