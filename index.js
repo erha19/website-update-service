@@ -5,6 +5,7 @@ const exec = require('child_process').exec
 const { mkdir, touch, echo, cat, rm, git, npm, mv, cp} = cmd;
 const ROOT = process.cwd();
 const path = require('path');
+let ohterConfigs;
 
 const scheduleCronstyle = () => {
   schedule.scheduleJob('*/30 * * * *', function(){
@@ -14,9 +15,13 @@ const scheduleCronstyle = () => {
 }
 
 const spliceRootConfig = (configs) => {
-  for(let i in configs){
-    if(configs[i].root) {
-      return configs.splice(i, 1);
+  let config = Object.assign({}, configs)
+  let root;
+  for(let i in config){
+    if(config[i].root) {
+      root = config.splice(i, 1);
+      ohterConfigs = config
+      return root;
     }
   }
   return false;
@@ -42,15 +47,15 @@ const runTask = async () => {
   // console.log(`=> mv public/ .deploy/`)
   // await mv(`public/ .deploy/`)
   // process.chdir(`.deploy`)
-  for(let i in configs.gits) {
-    if (/^http(s)?/.test(configs.gits[i].repo)) {
-      console.log(`=> git clone ${configs.gits[i].repo} -b ${configs.gits[i].branch} ${configs.gits[i].directory}`)
-      await git.clone(`${configs.gits[i].repo} -b ${configs.gits[i].branch} ${configs.gits[i].directory}`)
-      await rm(`-rf ${configs.gits[i].directory}/.git`)
+  for(let i in ohterConfigs) {
+    if (/^http(s)?/.test(ohterConfigs[i].repo)) {
+      console.log(`=> git clone ${ohterConfigs[i].repo} -b ${ohterConfigs[i].branch} ${ohterConfigs[i].directory}`)
+      await git.clone(`${ohterConfigs[i].repo} -b ${ohterConfigs[i].branch} ${ohterConfigs[i].directory}`)
+      await rm(`-rf ${ohterConfigs[i].directory}/.git`)
     }
     else {
-      await mkdir(`${path.join(ROOT, configs.rootPath,`${root[0].directory}tmpelate`,configs.gits[i].repo)}`)
-      await cp(`-R ${path.join(ROOT, configs.gits[i].repo)}/* ${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`, configs.gits[i].repo)}`)
+      await mkdir(`${path.join(ROOT, configs.rootPath,`${root[0].directory}tmpelate`,ohterConfigs[i].repo)}`)
+      await cp(`-R ${path.join(ROOT, ohterConfigs[i].repo)}/* ${path.join(ROOT, configs.rootPath, `${root[0].directory}tmpelate`, ohterConfigs[i].repo)}`)
     }
   }
   console.log(`=> rm -rf ${path.join(ROOT, configs.rootPath, root[0].directory)}`)
